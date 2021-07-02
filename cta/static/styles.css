@@ -1,0 +1,304 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: #1c1c1c;
+}
+
+  /*Header*/
+
+.header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #1c1c1c;
+    padding: 0 25px;
+    transition: 0.3s;
+}
+
+.main {
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    color: #24b561;
+    text-decoration: none;
+}
+
+
+/* Inicio*/
+
+article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+    height: 800px;
+}
+
+h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 70px;
+    margin-top: -450px;
+    margin-right: 103px;
+    color: #24b561;
+    padding: 8px 24px;
+    border-radius: 35px;
+    background-color:transparent;
+    text-decoration: none;
+    opacity: 98%;
+}
+h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 45px;
+    color: #cccccc;
+    opacity: 90%;
+}
+
+h3 {
+    font-family: "Raleway", sans-serif;
+    font-size: 25px;
+    color: #666666;
+
+}
+
+h4 {
+    font-family: "Raleway", sans-serif;
+    font-size: 28px;
+    color: #666666;
+    ;
+}
+
+h5 {
+    font-family: "Raleway", sans-serif;
+    font-size: 23px;
+    color: #cccccc;
+}
+
+p {
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    color: #666666;
+}
+
+
+article:nth-child(1) {
+
+    background-image: url(img/parallax.jpg);
+    background-size: cover;
+}
+
+article:nth-child(2) {
+    background: #1c1c1c;
+}
+
+article:nth-child(3) {
+    background-image: url(img/testimonials-bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+article:nth-child(4) {
+    background: #1c1c1c;
+}
+
+/*Cotiza Ahora - Mapa*/
+
+.cta{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: 100px auto;
+    align-items: center;
+}
+
+.mapa{
+    flex:3;
+    align-content: flex-end;
+    width: 100%;
+}
+
+.servicio_1{
+    flex:1;
+    margin-right: 200px;
+}
+
+.servicio_1 h3 > p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.sent-form{
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    color: #666666;
+}
+
+/*Nosotros*/
+
+.nosotros {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 90%;
+}
+.nosotros-cuantovaser {
+    margin-bottom: 630px;
+}
+
+.nosotros-cuantovaser > h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 45px;
+    opacity: 95%;
+}
+
+.nosotros-cuantovaser  > p {
+    color: #666666;
+    font-size: 23px;
+    line-height: 1.5;
+}
+
+/*Contacto*/
+
+.contacto {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    background-color: #1c1c1c;
+}
+
+.contacto_1 {
+    align-content: center;
+    margin: 10px;
+    padding: 20px;
+}
+
+
+.contacto_2 {
+    margin: 10px;
+    padding: 20px;
+}
+
+/*Footer*/
+
+#footer {
+    width: 100%;
+    height: 20px;
+    background-color: #1c1c1c;
+}
+
+.mensaje{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/*Navbar*/
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.menu li {
+    list-style-type: none;
+}
+
+.menu li a {
+    font-family: "Raleway", sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 40px 25px;
+    font-size: 30px;
+    line-height: 1;
+    transition: 0.3s;
+}
+
+.menu li a:hover {
+    box-shadow: 0 -5px 0px #ffffff inset,
+    500px 0 0 #1c1c1c inset;
+    padding: 35px 25px 45px 25px;
+}
+
+/*Media queries*/
+
+@media screen and (max-width: 700px) {
+    .toggle-menu {
+        display: block;
+    }
+
+    .header {
+        padding: 10px 20px;
+    }
+
+    .menu {
+        justify-content: start;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: #24b561;
+        width: 300px;
+        height: 100%;
+        padding-top: 65px;
+    }
+
+    .menu li {
+        width: 100%;
+    }
+    Nav
+    .menu li a,
+    .menu li a:hover {
+        padding: 30px;
+        font-size: 24px;
+        box-shadow: 0 1px 0 #9b9b9b
+        inset;
+    }
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon)
+@media screen and (max-width: 600px) {
+    .menu a:not(:first-child) {display: none;}
+    .menu a.icon {
+      float: right;
+      display: block;
+    }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally)
+@media screen and (max-width: 700px) {
+    .menu.responsive {position: relative;}
+    .menu.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .menu.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+}
+

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Form Cta</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="../static/css/montserrat-font.css">
+	<link rel="stylesheet" type="text/css" href="../static/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="../static/css/style.css"/>
+</head>
+<body class="form-v10">
+	{% if submitted %}
+		Tus datos han sido enviados exitosamente
+	{% else %}
+	<div class="page-content">
+		<div class="form-v10-content">
+			<form class="form-detail" action="" method="post" id="myform">
+				{% csrf_token %}
+				<div class="form-left">
+					<h2>Información sobre el paciente</h2>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" name="nombre" id="nombre" class="input-text" placeholder="Nombre" required>
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" name="apellido" id="apellido" class="input-text" placeholder="Apellido" required>
+						</div>
+					</div>
+					<div class="form-row">
+						<input type="text" name="edad" class="input-text" id="edad" placeholder="Edad" required>
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<select name="interpretación">
+								<option value="interpretacion">Interpretación</option>
+							    <option value="si">Sí</option>
+							    <option value="no">No</option>
+							</select>
+							<span class="select-btn">
+							  	<i class="zmdi zmdi-chevron-down"></i>
+							</span>
+						</div>
+						<div class="form-row form-row-2">
+							<select name="domicilio">
+								<option value="domicilio">Estudio a domicilio</option>
+							    <option value="si">Sí</option>
+							    <option value="no">No</option>
+							</select>
+							<span class="select-btn">
+							  	<i class="zmdi zmdi-chevron-down"></i>
+							</span>
+						</div>
+					</div>
+					<div>
+						<br></br>
+						<br></br>
+						<br></br>
+						<br></br>
+						<br></br>
+					</div>
+					<div>
+						<div>
+						<img class="form-images" src="../static/img/cotizar.jpg" alt="Cotiza ahora">
+						</div>
+					</div>
+				</div>
+				<div class="form-right">
+					<h2>Ubicación</h2>
+					<div class="form-row">
+						<input type="text" name="calle" class="input-text" id="calle" placeholder="Calle" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="numero" class="input-text" id="numero" placeholder="Número" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="colonia" class="input-text" id="colonia" placeholder="Colonia" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="municipio" class="input-text" id="municipio" placeholder="Municipio" required>
+					</div>
+					<div class="form-row">
+						<select name="urgente">
+							<option value="urgente">Es urgente</option>
+							<option value="si">Sí</option>
+							<option value="no">No</option>
+						</select>
+						<span class="select-btn">
+							  <i class="zmdi zmdi-chevron-down"></i>
+						</span>
+					</div>
+					<h2>Responsable del paciente</h2>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" name="nombre_2" id="nombre_2" class="input-text" placeholder="Nombre" required>
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" name="apellido_2" id="apellido_2" class="input-text" placeholder="Apellido" required>
+						</div>
+					</div>
+					<div class="form-group">
+					<div class="form-row from-row-1">
+						<input type="text" name="celular" class="celular" id="celular" placeholder="Celular" required>
+					</div>
+					</div>
+					<div class="form-row-last">
+						<input type="submit" name="register" class="register" value="Cotizar">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	{% endif %}
+</body>
+</html>
