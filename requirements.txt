@@ -37,7 +37,6 @@ jsonschema ===3.0.2
 lazy-object-proxy==1.6.0
 MarkupSafe ===2.0.1
 mccabe==0.6.1
-mkl-random ===1.2.1
 mkl-service==2.3.0
 mysql-connector==2.2.9
 mysql-connector-python==8.0.24
