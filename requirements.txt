@@ -48,6 +48,7 @@ packaging==20.9
 pandas==1.2.4
 pluggy==0.13.1
 protobuf==3.15.8
+psycopg2-binary==2.9.1
 py==1.10.0
 pycosat==0.6.3
 pycparser==2.19
