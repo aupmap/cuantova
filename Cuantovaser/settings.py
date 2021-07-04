@@ -85,12 +85,14 @@ WSGI_APPLICATION = 'Cuantovaser.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd1nf97t0g0iddj',
+        'HOST': 'ec2-107-21-10-179',
+        'PORT': 5432,
+        'USER': 'emoptqghlusdud',
+        'PASSWORD': '61646079388630e730061223d77d6082075ca3c246f2c60cf6fed0b23116fa02',
     }
 }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 

@@ -10,9 +10,9 @@ import geocoder
 
 def home(request):
 
-    address = Cuantovaser.objects.all().last()
-    #location = geocoder.osm(address)
-    address = request.POST.get(address)
+    #address = Cuantovaser.objects.all().last()
+    location = geocoder.osm('address')
+    #address = request.POST.get(address)
     location = geocoder.osm('27 Genova, Guadalajara')
     lat = location.lat
     lng =location.lng

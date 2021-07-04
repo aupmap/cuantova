@@ -7,5 +7,5 @@ class SdcForm(forms.ModelForm):
 
     class Meta:
         model = Cuantovaser
-        fields = ['address']
+        fields = ['address', ]
 
