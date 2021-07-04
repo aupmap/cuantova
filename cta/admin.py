@@ -8,11 +8,11 @@ class UserAdmin(admin.ModelAdmin):
 
 # Register your models here.
 class FormAdmin(admin.ModelAdmin):
-    list_display = ("address", "nombre", "apellido", "edad", "interpretacion", "domicilio", "calle",
+    list_display = ("nombre", "apellido", "edad", "interpretacion", "domicilio", "calle",
                     "numero", "colonia", "municipio", "urgente", "nombre_2", "apellido_2", "celular")
 
 class CuantovaserAdmin(admin.ModelAdmin):
-    list_display = ("address", "nombre", "apellido", "edad", "interpretacion", "urgente", "nombre_2", "apellido_2", "celular")
+    list_display = ("address", )
 
 admin.site.register(Cuantovaser, CuantovaserAdmin)
 admin.site.register(Form, FormAdmin)
