@@ -35,4 +35,4 @@ class Form(models.Model):
     celular = models.CharField(max_length=11)
 
 def __str__(self):
-    return self.nombre
+    return self.address

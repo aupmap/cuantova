@@ -15,6 +15,7 @@ import os
 import django_heroku
 import dj_database_url
 from decouple import config
+import psycopg2
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -80,19 +81,22 @@ TEMPLATES = [
 WSGI_APPLICATION = 'Cuantovaser.wsgi.application'
 
 
+
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'd1nf97t0g0iddj',
-        'HOST': 'ec2-107-21-10-179',
-        'PORT': 5432,
         'USER': 'emoptqghlusdud',
         'PASSWORD': '61646079388630e730061223d77d6082075ca3c246f2c60cf6fed0b23116fa02',
+        'HOST': 'ec2-107-21-10-179',
+        'PORT': 5432,
     }
 }
+
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
@@ -146,3 +150,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR)
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 django_heroku.settings(locals())
+
+#DATABASES['default'] = dj_database_url.config()
