@@ -91,4 +91,7 @@ def add_user(request):
 
     return render(request, "cta/add_user.html")
 
+def gracias(request):
+    return render(request, "cta/gracias.html" )
+
 
