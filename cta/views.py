@@ -4,27 +4,50 @@ import os
 import folium
 from .forms import SdcForm
 from . import views
+from geopy.geocoders import Nominatim
 import geocoder
 
 
 
+#Opcion 1, geocode address
+
+"""
 def home(request):
 
-    #address = Cuantovaser.objects.all().last()
-    location = geocoder.osm('address')
-    #address = request.POST.get(address)
+    address = Cuantovaser.get(address)
     location = geocoder.osm('27 Genova, Guadalajara')
     lat = location.lat
     lng =location.lng
     country = location.country
+"""
 
-    #shp_dir = os.path.join(os.getcwd(),'cta', 'media', 'shp')
+
+#Opcion 2, geocode address
+
+
+def home(request):
+
+    address = Cuantovaser.get(address)
+    url = 'http://localhost/nominatim/'
+
+    g = geocoder.osm(address)
+
+    if (bool(g.osm)==True):
+        lon=g.osm['x']
+        lat=g.osm['y']
+        state=g.osm['addr:state']
+        country=g.osm['addr:country']
+
+        print (address,',',lat,',',lon,',',state,',',country)
+    else:
+        print ('address not found!')
+
 
     # folium
 
-    m = folium.Map(width=800, height=500, location=[20.67937121,-103.36152288], zoom_start=15)
+    m = folium.Map(width=800, height=500, location=[20.67937121,-103.36152288], zoom_start=15, tiles='cartodb positron')
 
-    folium.Marker([lat, lng], tooltip='Click for more', popup=country).add_to(m)
+    folium.Marker([lat, lon], tooltip='Click for more', popup=country).add_to(m)
 
     ## style
     """
